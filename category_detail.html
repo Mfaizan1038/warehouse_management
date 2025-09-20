@@ -1,0 +1,8 @@
+<h1>Items of {{ category.name }} in {{ warehouse.name }}</h1>
+<ul>
+{% for item in items %}
+    <li>
+        <a href="{% url 'item_detail' item.id %}">{{ item.type.name }} - Serial: {{ item.serial_number }}</a>
+    </li>
+{% endfor %}
+</ul>

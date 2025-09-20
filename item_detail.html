@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Detail</title>
+    <link rel="stylesheet" href="{% static 'item_detail.css' %}">
+</head>
+<body>
+    <h1>Item Detail</h1>
+    <p><strong>Name:</strong> {{ item.type.name }}</p>
+    <p><strong>Description:</strong> {{ item.type.description }}</p>
+    <p><strong>Category:</strong> {{ item.type.category.name }}</p>
+    <p><strong>Price:</strong> {{ item.type.default_price }}</p>
+    <p><strong>Warehouse:</strong> {{ item.warehouse.name }}</p>
+    <p><strong>Location in Warehouse:</strong> {{ item.location_in_warehouse }}</p>
+    <p><strong>Serial Number:</strong> {{ item.serial_number }}</p>
+    <p><strong>Extra Info:</strong> {{ item.extra_info }}</p>
+</body>
+</html>

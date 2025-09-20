@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="{% url 'inventory_list' %}">Go to Inventory</a>
+    <h2>Warehouses</h2>
+    {% for warehouse in warehouses %}
+    <li>
+        <a href="{% url 'warehouse_detail' warehouse.id %}">
+            {{warehouse.name}} {{warehouse.location}}
+        </a>
+
+
+    </li>
+    {% endfor %}
+
+</body>
+</html>

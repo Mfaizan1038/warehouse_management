@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Quantity</title>
+</head>
+<body>
+    <h2>Add Quantity</h2>
+    
+
+    <form method="post">
+        {% csrf_token %}
+        <label for="quantity">Enter quantity to add:</label>
+        <input type="number" name="quantity" id="quantity"  required>
+        <button type="submit">Add</button>
+    </form>
+
+    <a href="{% url 'inventory_list' %}">Back to Inventory</a>
+</body>
+</html>
